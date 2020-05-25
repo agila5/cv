@@ -17,17 +17,28 @@
 \setlength{\hintscolumnwidth}{2.85cm}
 \nopagenumbers{}
 
+% I want to extend the width and get all social links on the same line. 
+% Code taken from: https://tex.stackexchange.com/questions/478130/how-do-i-get-all-of-the-social-links-onto-one-line?rq=1
+\usepackage{etoolbox}
+\patchcmd{\makehead}% <cmd>
+{0.8\textwidth}% <search>
+{\textwidth}% <replace>
+{}{}% <success><failure>
+
 % personal data
 \name{Andrea}{Gilardi}
 \title{Curriculum Vitae} 
 \date{\today}
-% optional, remove / comment the line if not wanted
 \address{}{Olginate (LC), Italy}{}{}
 \phone[mobile]{+39 3478111403}   
 \email{a.gilardi5@campus.unimib.it}
 \social[github]{agila5}
+
+% I'm not sure how to extend the \social option for SO and so on. This is an alternative approach taken from https://tex.stackexchange.com/questions/187962/extending-moderncv-social-command
+\extrainfo{\href{https://stackoverflow.com/users/10280411/agila}{\faStackOverflow{} agila}}
+
 % \homepage{https://github.com/agila5} 
-%\extrainfo{additional information}    \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Some quote}
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
