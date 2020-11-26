@@ -1,23 +1,24 @@
-%% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
+% class and style
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
 % character encoding
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
-\setlength{\hintscolumnwidth}{2.85cm}
+\usepackage[scale=0.85]{geometry}
 \nopagenumbers{}
 
-% I want to extend the width and get all social links on the same line. 
+% The following latex code is used to extend the width of the social links column and merge all of them in the same line. 
 % Code taken from: https://tex.stackexchange.com/questions/478130/how-do-i-get-all-of-the-social-links-onto-one-line?rq=1
 \usepackage{etoolbox}
 \patchcmd{\makehead}% <cmd>
@@ -37,39 +38,44 @@
 % I'm not sure how to extend the \social option for SO and so on. This is an alternative approach taken from https://tex.stackexchange.com/questions/187962/extending-moderncv-social-command
 \extrainfo{\href{https://stackoverflow.com/users/10280411/agila}{\faStackOverflow{} agila}}
 
-% \homepage{https://github.com/agila5} 
-% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-% \quote{Some quote}
+% \homepage{https://github.com/agila5} TODO
+% \photo[64pt][0.4pt]{picture} % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote} TODO
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+% \makeatletter
+% \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+% \makeatother
 
 \begin{document}
 	\makecvtitle
+	\vspace{-0.5cm}
 	\section{Summary}
-	\cvitem{}{I am a PhD student in Statistics and Mathematical Finance at the University of Milan - Bicocca. My main research interests are spatial and spatiotemporal models on road networks.}
+	\cvitem{}{I am a PhD Student in Statistics and Mathematical Finance at the University of Milan - Bicocca. My main research interests are spatial and spatiotemporal models on road networks.}
 	
 	\section{Education}
 	\cventry{NOV.17--Present}{PhD Student in Statistics and Mathematical Finance}{University of Milan - Bicocca}{}{}{}
 	\cventry{SET.15--OTT.17}{Master Degree in Statistics}{University of Milan - Bicocca}{}{}{Final mark: 110/110 e lode (Magna cum laude)} 
 	\cventry{SET.12--SET.15}{Bachelor Degree in Statistics}{Università of Milan - Bicocca}{}{}{Final mark: 110/110 e lode (Magna cum laude)}
 	
+	\section{Teaching}
+	\cvitemwithcomment{Teaching Assistant}{Introduction to Statistical Inference, University of Milan - Bicocca}{SEP.20--FEB.21}
+	\cvitemwithcomment{Teaching Assistant}{R for Road Safety. \underline{\href{https://www.racfoundation.org/introduction-to-r-for-road-safety}{Program}} and \underline{\href{https://cran.r-project.org/web/packages/stats19/vignettes/stats19-training.html}{Materials}}.}{OCT.19--OCT.19}
+	\cvitemwithcomment{Teaching Assistant}{Introduction to Statistical Inference, University of Milan - Bicocca}{SEP.19--FEB.20}
+	\cvitemwithcomment{Tutor}{Introduction to R, University of Milan - Bicocca. \underline{\href{https://github.com/agila5/bbetween_R}{Materials}}.}{MAR.19--APR.19}
+	\cvitemwithcomment{Tutor}{Introduction to \textit{tidyverse} and \textit{plumber}, University of Turin - Master in Data Science}{OCT.18--OCT.18}
+	\cvitemwithcomment{Teaching Assistant}{Introduction to Statistical Inference, University of Milan - Bicocca}{SEP.18--FEB.19}
+	\cvitemwithcomment{Teaching Assistant}{Statistica Economica M., University of Milan - Bicocca}{APR.18--JUL.18}
+	\cvitemwithcomment{Teaching Assistant}{Introduction to Statistical Inference, University of Milan - Bicocca}{SEP.17--SEP.18}
+	\cvitemwithcomment{Teaching Assistant}{Informatics, University of Milan - Bicocca}{MAY.17--SEP.17}
+
 	\section{Working Experience}
-	\cventry{OCT.19--OCT.19}{Teaching assistant}{University of Leeds}{}{}{I helped Dr. Robin Lovelace teaching a course on using R for Road Safety. \underline{\href{https://cran.r-project.org/web/packages/stats19/vignettes/stats19-training.html}{Materials}}}
-	\cventry{SEP.19--FEB.20}{Teaching assistant}{University of Milan - Bicocca}{}{}{Course: Statistica II - Introduction to Statistical Inference.}
-	\cventry{MAR.19--APR.19}{Tutor}{University of Milan - Bicocca}{}{}{I taught a short introductory course (20h) related to the R software. \underline{\href{https://github.com/agila5/bbetween_R}{Materials}}.}
-	\cventry{OCT.18--OCT.18}{Tutor}{University of Turin - Master in Data Science}{}{}{I taught a short introductory lesson (4h) related to the R packages \textit{tidyverse} and \textit{plumber}.}
-	\cventry{SEP.18--FEB.19}{Teaching assistant}{University of Milan - Bicocca}{}{}{Course: Statistica II - Introduction to Statistical Inference.}
+	\cventry{OCT.20--NOV.20}{Consultant}{Catholic University of the Sacred Heart, Milan}{Milan (Italy)}{}{I worked on a project named \textit{Black Box and Big Data per la stima e la previsione dei sinistri} under the supervision of Prof. Diego Zappa.}
 	\cventry{APR.18--OCT.18}{Consultant}{GR \& Partner S.A.S}{Milan (Italy)}{}{I developed a User Interface using R and Shiny.}
-	\cventry{APR.18--JUL.18}{Teaching assistant}{University of Milan - Bicocca}{}{}{Course: Statistica Economica M.}
-	\cventry{SEP.17--SEP.18}{Teaching assistant}{University of Milan - Bicocca}{}{}{Course: Statistica II - Introduction to Statistical Inference.}
-	\cventry{MAY.17--SEP.17}{Teaching assistant}{University of Milan - Bicocca}{}{}{Course: Informatica - Informatics.}
 	
 	\section{Master Degree Thesis}
 	\cvitem{Title}{\emph{Previsione spaziotemporale per gli interventi in emergenza delle ambulanze nel comune di Milano}}
-	\cvitem{Supervisor}{Prof. Riccardo Borgoni}
+	\cvitem{Supervisor}{Prof. Riccardo Borgoni.}
 	\cvitem{Summary}{We developed a spatiotemporal model to predict the distribution of the emeregency medical interventions in Milan.}
 	
 	\section{Visiting Periods}
@@ -78,7 +84,8 @@
 	
 	\section{Publications}
 	\begin{enumerate}
-		\item \textbf{Gilardi, A.}, Lovelace, R., Padgham, M. Street Networks in R. Under review. 
+		\item \textbf{Gilardi, A.}, Mateu, J., Borgoni, R., Lovelace, R., Multivariate hierarchical analysis of car crashes data considering a spatial network lattice. Under review. \underline{\href{https://arxiv.org/abs/2011.12595}{Preprint}}.  
+		\item \textbf{Gilardi, A.}, Lovelace, R., Padgham, M. Street Networks in R. Under review. \underline{\href{https://osf.io/78yub}{Preprint}}.
 		\item Borgoni, R., \textbf{Gilardi, A.}, \& Zappa, D. (2020). Assessing the Risk of Car Crashes in Road Networks. Social Indicators Research, 1-19.
 		\item \textbf{Gilardi, A.}, Borgoni, R., \& Zappa, D. (2020). Assessing the Risk of Car Accidents in Road Networks. In NESPUTT 2019-New Economic \& Statistical Perspectives on Urban \& Territorial Themes.
 		\item \textbf{Andrea, G.}, Riccardo, B., \& Zappa, D. (2019). Spatial Logistic Regression for Events Lying on a Network: Car Crashes in Milan. In Smart Statistics for smart applications (pp. 1165-1170). Pearson Italia.
@@ -86,7 +93,7 @@
 	\end{enumerate}
 
 	\section{Conferences}
-	% \cvlistitem{OpenGeoHub 2020, Wageningen (Netherlands)}
+	\cvlistitem{OpenGeoHub 2020, Wageningen (Netherlands)}
 	\cvlistitem{e-RUM 2020: European R User Meeting. Online event.}
 	\cvlistitem{Nesputt 2019: New Economic \& Statistical Perspective, Milan (Italy).}
 	\cvlistitem{UseR! 2019 Meeting, 9-12 July 2019, Tolouse (France).}
@@ -97,15 +104,23 @@
 	
 	\section{Organized Conferences}
 	% \cvlistitem{plotKML}
-	\cvlistitem{I organized an online Webinar and Hackathon on the R package \href{https://github.com/luukvdmeer/sfnetworks}{\underline{\texttt{sfnetworks}}} as official satellite events of the e-Rum 2020 Conference.}
-	\cvlistitem{I was a member of the Local Organizing Committee of \href{https://www.nesputt2019.unimib.it/}{\textcolor{blue}{Nesputt 2019: New Economic \& Statistical Perspective}}, Milan (Italy).}
+	\cvlistitem{I organized an online Webinar and Hackathon related to the R package \href{https://github.com/luukvdmeer/sfnetworks}{\underline{\texttt{sfnetworks}}} as official satellite events of the e-Rum 2020 Conference. \underline{\href{https://github.com/sfnetworks/sfnetworks-webinar}{Materials}}, \underline{\href{https://sfnetworks.github.io/sfnetworks-webinar/slides\#1}{slides}} and \underline{\href{https://www.youtube.com/watch?v=ZXTNXsvKYwo}{recordings}}.}
+	\cvlistitem{I was a member of the Local Organizing Committee of \underline{\href{https://www.nesputt2019.unimib.it/}{Nesputt 2019: New Economic \& Statistical Perspective}}, Milan (Italy).}
+	
+	\section{Grants}
+	\cvlistitem{\underline{\href{https://www.r-consortium.org/projects/awarded-projects/2019-group-2\#Tidy+spatial+networks+in+R}{Tidy Spatial Networks in R}} funded by the \underline{\href{https://www.r-consortium.org/}{R Consortium}}. 9000\$.}
 
 	\section{Awards}
-	\cvlistitem{SIS award for the best poster at the SIS-2019 conference.}
-	\cvlistitem{Young-SIS award for the best poster at the SIS-2018 conference.}
+	\cvlistitem{Scolarship for the OpenGeoHub 2020 - Summer School. Project: \textit{plotKML functionality to support sf and stars objects}. \underline{\href{https://www.youtube.com/watch?v=n3SjuJIEnKY&list=PLXUoTpMa_9s0Ea--KTV1OEvgxg-AMEOGv&index=42}{Final presentation}}.}
+	\cvlistitem{\underline{\href{https://www.sis-statistica.it/}{SIS}} award for the best poster at the SIS-2019 conference.}
+	\cvlistitem{\underline{\href{https://youngsis.github.io/}{Young-SIS}} award for the best poster at the SIS-2018 conference.}
 	
 	\section{Software}
-	\cvitem{}{I am a proficient R user, with a particular interest in the \texttt{r-spatial} packages and the tidyverse environment. I attended the \textit{Tidyverse Developer Day} in Tolouse during the UseR! 2019 conference. I am the author of one R package (not on CRAN at the moment) called \underline{\href{https://github.com/ITSLeeds/osmextract}{\textit{osmextract}}}. I contributed to several R packages like \textit{ggplot2}, \textit{recipes}, \textit{sf}, \textit{stplanr} and \textit{osmdata}. I have basic knowledge of SAS, Python and STATA. I can use \LaTeX~ for writing scientific documents.}	
+	\cvitem{}{I am a proficient R user, with a particular interest in the \texttt{r-spatial} world and the tidyverse environment. I am the author of two R packages, namely \underline{\href{https://github.com/ITSLeeds/osmextract}{\texttt{osmextract}}} (currently \underline{\href{https://github.com/ropensci/software-review/issues/395}{under review}} by rOpenSci foundation) and \underline{\href{https://github.com/luukvdmeer/sfnetworks}{\texttt{sfnetworks}}}. 
+	I contributed to several R packages like \texttt{ggplot2}, \texttt{recipes}, \texttt{sf}, \texttt{stplanr} and \texttt{osmdata}. 
+	I attended the \textit{Tidyverse Developer Day} in Tolouse during the UseR! 2019 conference. 
+	}
+	\cvitem{}{I have basic knowledge of SAS, Python and STATA, and \LaTeX.}	
 		
 	\section{Badges}
 	\cvitem{SAS}{\underline{\href{https://www.youracclaim.com/badges/9b93b851-47a9-4ff9-91f7-433cbfa0fdb2/public_url}{SAS Certified Base Programmer for SAS 9}}}
