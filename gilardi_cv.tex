@@ -6,12 +6,12 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{unicode, colorlinks, urlcolor=black}{hyperref}
 
 % class and style
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
-\moderncvcolor{blue}
+\moderncvcolor{black}
 
 % Color 
 \definecolor{myblue}{rgb}{0.22,0.45,0.70}
@@ -61,13 +61,10 @@
   \maketitle
   \vspace{-0.75cm}
   
-  \section{Summary}
-  \cvitem{}{I am a research fellow in Statistics at the University of Milano - Bicocca, Department of Economics, Management and Statistics (DEMS). My main research interests are spatial and spatiotemporal models on linear networks.}
+  \hypersetup{urlcolor=blue}
   
-  \hypersetup{
-  	pdfborderstyle={/S/U/W 0.5}, % underline links instead of boxes
-  	urlbordercolor=black        % color of external links
-  }
+  \section{Summary}
+  \cvitem{}{I am a research fellow in Statistics at the \href{https://en.unimib.it/}{University of Milano - Bicocca}, \href{https://dems.unimib.it/en}{Department of Economics, Management and Statistics}. My main research interests are spatial and spatiotemporal models on linear networks.}
 
   \section{Current Position}
   \cventry{JAN. 21 - Today}{Research fellow (Assegnista di Ricerca)}{University of Milano - Bicocca}{Milan, Italy}{}{I work on a project entitled "Spatio-temporal models for spatial network data".}
@@ -89,7 +86,7 @@
   \cvlistitem{Tutor for the course of \emph{Informatica} (Informatics),  University of Milano - Bicocca, Bachelor degree in Statistical and Economic Sciences, 20 hours, a.y. 2016-2017.}
 
   \section{Working Experience}
-  \cventry{OCT.20--NOV.20}{Tutor}{Catholic University of the Sacred Heart}{Milan (Italy)}{}{I worked on a project named \textit{Black Box and Big Data per la stima e la previsione dei sinistri} under the supervision of \href{https://docenti.unicatt.it/ppd2/it/docenti/04485/diego-zappa/profilo}{Prof. Diego Zappa}.}
+  \cventry{OCT.20--NOV.20}{Tutor}{Catholic University of the Sacred Heart}{Milan (Italy)}{}{I worked on a project named \textit{Black Box and Big Data per la stima e la previsione dei sinistri} under the supervision of Prof. \href{https://docenti.unicatt.it/ppd2/it/docenti/04485/diego-zappa/profilo}{Diego Zappa}.}
   \clearpage
   \cventry{JUN.20--OCT.20 \& JUN.21 -- OCT.21 \& JUN.22 -- OCT.22}{Tutor}{University of Milano - Bicocca}{Milan (Italy)}{}{I prepared and organized the admission tests for the master degree in Statistics and Economics, Department of Economics, Management and Statistics.}
   \cventry{APR.18--OCT.18}{Consultant}{GR \& Partner S.A.S}{Milan (Italy)}{}{I developed a User Interface using R and Shiny.}
@@ -104,8 +101,8 @@
   \cvitem{Summary}{We developed a spatiotemporal model to predict the distribution of the emergency medical interventions in Milan.}
 	
   \section{Visiting Periods}
-  \cvlistitem{I spent seven months in Castellón de la Plana (ES), from February 2020 to June 2020 and May 2021 to July 2021, working with \href{https://www3.uji.es/~mateu/}{Prof. Jorge Mateu} on statistical models for events on road networks.}
-  \cvlistitem{I stayed in Leeds (UK) for three months, from September 2019 to November 2019, working with \href{https://environment.leeds.ac.uk/transport/staff/953/dr-robin-lovelace}{Prof. Robin Lovelace} on R packages and classes for road networks. \href{https://github.com/agila5/leeds_seminar}{Final presentation}.}
+  \cvlistitem{I spent seven months in Castellón de la Plana (ES), from February 2020 to June 2020 and May 2021 to July 2021, working with Prof. \href{https://www3.uji.es/~mateu/}{Jorge Mateu} on statistical models for events on road networks.}
+  \cvlistitem{I stayed in Leeds (UK) for three months, from September 2019 to November 2019, working with Prof. \href{https://environment.leeds.ac.uk/transport/staff/953/dr-robin-lovelace}{Robin Lovelace} on R packages and classes for road networks. \href{https://github.com/agila5/leeds_seminar}{Final presentation}.}
 	
   \section{Publications}
   \begin{enumerate}
@@ -170,13 +167,17 @@
   \cvlistitem{\href{https://www.sis-statistica.it/}{SIS} award for the best poster at the SIS-2019 conference.}
   \cvlistitem{\href{https://youngsis.github.io/}{Young-SIS} award for the best poster at the SIS-2018 conference.}
   
+  \hypersetup{urlcolor=black}
+  
   \section{Community activities}
-  \cvitem{}{\textcolor{myblue}{\textbf{Referee service}}}
+  \cvitem{}{\textbf{Referee service}}
   \cvitem{}{\href{https://www.springer.com/journal/10182}{AStA Advances in Statistical Analysis}; \href{https://www.sciencedirect.com/journal/spatial-statistics}{Spatial Statistics}; 
   \href{https://ropensci.org/}{rOpenSci}.} 
   \vspace*{0.15cm}
-  \cvitem{}{\textcolor{myblue}{\textbf{Affiliations}}}
+  \cvitem{}{\textbf{Affiliations}}
   \cvitem{}{\href{https://www.isi-web.org/}{International Statistical Institute (ISI)}; \href{https://www.sis-statistica.it/}{Società Italiana di Statistica (SIS)}; \href{https://ropensci.org/}{rOpenSci}.}
+  
+  \hypersetup{urlcolor=blue}
   
   \section{Software}
   \cvitem{}{I am a proficient R user, with a particular interest in the \texttt{r-spatial} world and the tidyverse environment. I am the author of two R packages, namely \href{https://github.com/ITSLeeds/osmextract}{\texttt{osmextract}} (\href{https://github.com/ropensci/software-review/issues/395}{reviewed} by rOpenSci foundation and now on \href{https://cran.r-project.org/package=osmextract}{CRAN}) and \href{https://github.com/luukvdmeer/sfnetworks}{\texttt{sfnetworks}} (also on \href{https://cran.r-project.org/package=sfnetworks}{CRAN}). The first package focuses on the management and downloading of Open Street Map data extracts obtained from several providers (like \href{https://download.geofabrik.de/}{Geofabrik}), while the second package provides a tidy approach to spatial network analysis.}
@@ -195,10 +196,9 @@
   \cvitem{Associazioni}{Volunteer at Volontari del Soccorso di Calolziocorte from July 2016.}
   
   \section{Notes}
-  Autorizzo il trattamento dei miei dati personali ai sensi del Decreto Legislativo 30 giugno 2003, n. 196 "Codice in materia di protezione dei dati personali". \\
+  Autorizzo la pubblicazione ai sensi del D.Lgs. n. 33/2013 "Riordino della disciplina riguardante gli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni" e acconsento all’utilizzo delle informazioni ivi contenute ai sensi del D.L. n. 196/2003 "Codice in materia di protezione dei dati personali". \\
   
-  Le dichiarazioni rese nel presente curriculum sono da ritenersi rilasciate ai sensi degli artt. 46 e 47 del D.P.R. 445/2000
-  
+  Le dichiarazioni rese nel presente curriculum sono da ritenersi rilasciate ai sensi degli artt. 46 e 47 del D.P.R. 445/2000.
   
   %\section{References}
   %\begin{cvcolumns}
